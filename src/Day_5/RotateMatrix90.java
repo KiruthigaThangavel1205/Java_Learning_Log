@@ -1,16 +1,21 @@
-package Day_05;
+package Day_5;
 
-public class RotateMatrix90_Anticlockwise {
+// Rotate mtrix 90 = Matrix -> Transpose -> Reverse each row
+
+public class RotateMatrix90 {
     public static void main(String[] args) {
         int arr[][] = {
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9}
-        };
+              };
 
-        for(int i=0; i<arr.length; i++)
+        int n = arr.length;
+
+        //Transpose
+        for(int i=0; i<n; i++)
         {
-            for(int j=i+1; j<arr.length; j++)
+            for(int j=i+1; j<n; j++)
             {
                 int temp = arr[i][j];
                 arr[i][j] = arr[j][i];
@@ -18,22 +23,24 @@ public class RotateMatrix90_Anticlockwise {
             }
         }
 
-        for(int j=0; j<arr.length; j++) {
-            int start = 0;
-            int end = arr.length-1;
+        //Reverse
+        for(int i=0; i<n; i++)
+        {
+            int start=0, end=n-1;
             while(start < end)
             {
-                int temp = arr[start][j];
-                arr[start][j] = arr[end][j];
-                arr[end][j] = temp;
+                int temp = arr[i][start];
+                arr[i][start] = arr[i][end];
+                arr[i][end] = temp;
                 start++;
                 end--;
             }
         }
 
-        for(int i=0; i<arr.length; i++)
+        //Print
+        for(int i=0; i<n; i++)
         {
-            for(int j=0; j<arr.length; j++)
+            for(int j=0; j<n; j++)
             {
                 System.out.print(arr[i][j]+" ");
             }
