@@ -1,4 +1,4 @@
-package Renault_Prep.matrix;
+package Day_05;
 
 // Rotate mtrix 90 = Matrix -> Transpose -> Reverse each row
 

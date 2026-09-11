@@ -1,4 +1,4 @@
-package Renault_Prep.matrix;
+package Day_05;
 
 public class ColumnWithMaxSum {
     public static void main(String[] args) {
