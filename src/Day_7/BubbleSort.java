@@ -1,4 +1,4 @@
-package Day_6;
+package Day_7;
 import java.util.*;
 public class BubbleSort {
     public static void main(String[] args) {
